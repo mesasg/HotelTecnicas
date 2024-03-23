@@ -40,7 +40,8 @@ public class Receptionist extends Employee {
             //ingresar creando objeto persona
         }
         else {
-            //ingresar creando equipo
+            //ingresa con team
+            
         }
         
         
