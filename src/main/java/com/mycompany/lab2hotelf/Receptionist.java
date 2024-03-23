@@ -4,12 +4,17 @@
  */
 package com.mycompany.lab2hotelf;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author saram
  */
 public class Receptionist extends Employee {
     private String phoneNo;
+    Reading in = new Reading();
+    Rooms room = new Rooms();
+    ArrayList<Rooms> rooms ;
 
     public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
         super(location, position, shift, name, id);
@@ -25,10 +30,19 @@ public class Receptionist extends Employee {
     }
     
     public void checkRoomAvailability(){
-        
+        rooms = room.getRooms();
     }
     public void bookRoom(){
         //array de habitaciones con bool de si esta true esta tomada y fals esta disponible
+        int guestType = in.leerIntRango("Selecciona el tipo de huesped que deseas registrar\n1-Huesped normal\n2-Equipo de futbol",
+                1, 2, "Opcion invalida");
+        if (guestType == 1){
+            //ingresar creando objeto persona
+        }
+        else {
+            //ingresar creando equipo
+        }
+        
         
     }
     public void generateBill(){

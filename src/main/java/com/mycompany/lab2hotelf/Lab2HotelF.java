@@ -52,7 +52,7 @@ public class Lab2HotelF {
         String phoneNo = in.leerString("Ingresa tu número de telefono");
         String location = in.leerString("Ingresa tu ubicación");
         receptionist = new Receptionist(name,id,phoneNo,location,position,shift);
-        
+        receptionist.bookRoom();
     }
     
     public static void logInGuest(){

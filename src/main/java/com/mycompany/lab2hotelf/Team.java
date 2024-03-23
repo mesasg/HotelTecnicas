@@ -8,14 +8,19 @@ package com.mycompany.lab2hotelf;
  *
  * @author saram
  */
-public class Player extends Person{
+public class Team extends Guest{
     private String position;
     private String number;
+    Reading in = new Reading();
 
-    public Player(String position, String number, String name, String id) {
-        super(name, id);
+    public Team(String name, String id,String position, String number, String phoneNo, String Address, String room) {
+        super(phoneNo, Address, room, name, id);
         this.position = position;
         this.number = number;
+    }
+
+    public void createTeam(){
+        int cantPlayers = in.leeryValidarInt("Ingresa la cantidad de jugadores que hay en tu equipo");
     }
 
     public String getPosition() {
