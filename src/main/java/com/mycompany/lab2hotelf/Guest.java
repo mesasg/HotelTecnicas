@@ -11,6 +11,8 @@ public class Guest extends Person {
         this.address = address;
         this.roomNo = roomNo;
     }
+    
+    
 
     public String getPhoneNo() {
         return phoneNo;
