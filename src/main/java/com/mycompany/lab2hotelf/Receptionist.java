@@ -34,7 +34,7 @@ public class Receptionist extends Employee {
     }
     public void bookRoom(){
         //array de habitaciones con bool de si esta true esta tomada y fals esta disponible
-        int guestType = in.leerIntRango("Selecciona el tipo de huesped que deseas registrar\n1-Huesped normal\n2-Equipo de futbol",
+        int guestType = in.readIntRange("Selecciona el tipo de huesped que deseas registrar\n1-Huesped normal\n2-Equipo de futbol",
                 1, 2, "Opcion invalida");
         if (guestType == 1){
             //ingresar creando objeto persona

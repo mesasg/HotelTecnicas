@@ -12,12 +12,12 @@ import java.util.ArrayList;
  */
 public class Rooms {
     private String number;
-    private boolean avalaible;
+    private boolean available;
     private ArrayList<Rooms> rooms;
 
-    public Rooms(String number, boolean avalaible) {
+    public Rooms(String number, boolean available) {
         this.number = number;
-        this.avalaible = avalaible;
+        this.available = available;
     }
 
     public Rooms() {

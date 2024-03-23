@@ -1,23 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.lab2hotelf;
 
-/**
- *
- * @author saram
- */
 public class Guest extends Person {
     private String phoneNo;
-    private String Address;
-    private String room;
+    private String address;
+    private String roomNo;
 
-    public Guest(String phoneNo, String Address, String room, String name, String id) {
+    public Guest(String phoneNo, String address, String roomNo, String name, String id) {
         super(name, id);
         this.phoneNo = phoneNo;
-        this.Address = Address;
-        this.room = room;
+        this.address = address;
+        this.roomNo = roomNo;
     }
 
     public String getPhoneNo() {
@@ -29,19 +21,19 @@ public class Guest extends Person {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getRoom() {
-        return room;
+        return roomNo;
     }
 
-    public void setRoom(String room) {
-        this.room = room;
+    public void setRoom(String roomNo) {
+        this.roomNo = roomNo;
     }
 
     @Override
@@ -49,8 +41,8 @@ public class Guest extends Person {
         StringBuilder sb = new StringBuilder();
         sb.append("Guest{");
         sb.append("phoneNo=").append(phoneNo);
-        sb.append(", Address=").append(Address);
-        sb.append(", room=").append(room);
+        sb.append(", Address=").append(address);
+        sb.append(", room=").append(roomNo);
         sb.append('}');
         return sb.toString();
     }

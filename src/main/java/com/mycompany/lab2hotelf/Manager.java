@@ -20,11 +20,11 @@ public class Manager extends Employee{
     }
 
     public void manageStaff() {
-        cantStaff = in.leeryValidarInt("¿A cuantos empleados deseas asignar?");
+        cantStaff = in.readAndValidateInt("¿A cuantos empleados deseas asignar?");
         shifts.assignShifts(cantStaff);
     }
     
-    public void recordComplains(){
+    public void recordComplaints(){
         //recibir del recepcionista?
     }
     
