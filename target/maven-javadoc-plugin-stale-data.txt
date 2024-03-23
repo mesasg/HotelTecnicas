@@ -1,0 +1,45 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+-sourcepath
+'C:/Users/saram/OneDrive/Documentos/NetBeansProjects/Lab2HotelF/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/saram/OneDrive/Documentos/NetBeansProjects/Lab2HotelF/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Lab2HotelF 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Lab2HotelF 1.0-SNAPSHOT API'
+com.mycompany.lab2hotelf
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\src\main\java = 1710628956198
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\allclasses-index.html = 1711152314111
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\allpackages-index.html = 1711152314120
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\copy.svg = 1711152314236
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\element-list = 1711152313893
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\help-doc.html = 1711152314223
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\index-all.html = 1711152314198
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\index.html = 1711152314212
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\link.svg = 1711152314241
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\member-search-index.js = 1711152314133
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\module-search-index.js = 1711152314124
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\overview-tree.html = 1711152314063
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\package-search-index.js = 1711152314127
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\script.js = 1711152314233
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\search-page.js = 1711152314251
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\search.html = 1711152314204
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\search.js = 1711152314246
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\stylesheet.css = 1711152314229
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\tag-search-index.js = 1711152314137
+C:\Users\saram\OneDrive\Documentos\NetBeansProjects\Lab2HotelF\target\site\apidocs\type-search-index.js = 1711152314130
