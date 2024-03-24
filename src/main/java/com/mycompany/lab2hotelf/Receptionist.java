@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 public class Receptionist extends Employee {
     private String phoneNo;
-    Reading in = new Reading();
     Hotel hotel = new Hotel();
     private ArrayList<Room> roomList;
 

@@ -39,7 +39,7 @@ public class Employee extends Person {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Person{");
+        sb.append("Empleado{");
         sb.append(", Ubicacion=").append(location);
         sb.append(", Cargo=").append(position);
         sb.append(", Turno=").append(shift);

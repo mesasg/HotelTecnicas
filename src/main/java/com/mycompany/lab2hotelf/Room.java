@@ -69,4 +69,14 @@ public class Room {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+
+    @Override
+    public String toString() {
+        return "Información de la habitación #" + roomNo 
+                + ": \n Ubicación: " + location 
+                + "\n Tipo: " + type 
+                + "\n Capacidad: " + capacity 
+                + "\n ¿Está Limpia?: " + (clean ? ("Sí"):("No")) 
+                + "\n ¿Está disponible?: " + (available ? ("Sí"):("No"));
+    }
 }

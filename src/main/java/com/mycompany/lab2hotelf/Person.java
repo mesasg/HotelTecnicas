@@ -1,6 +1,7 @@
 package com.mycompany.lab2hotelf;
 
 public class Person {
+    static Reading in = new Reading();
     private String name;
     private String id;
 
