@@ -17,16 +17,17 @@ public class Housekeeping extends Employee{
             String roomNo = in.readString("Ingresa el número de habitación que deseas registrar como limpia: ");
             housekeeper.cleanRoom(roomNo);
         }
-        System.out.println(hotel.getRoomsList());
     }
     
     public void cleanRoom(String roomNo){
+        boolean foundRoom = false;
         ArrayList<Room> roomList = hotel.getRoomsList();
-            for(int i = 0; i < roomList.size(); i++){
-                if (roomList.get(i).getRoomNo().equals(roomNo)){
-                    roomList.get(i).setClean(true);
-                    break;
-                }
+        for(int i = 0; i < roomList.size(); i++){
+            if (roomList.get(i).getRoomNo().equals(roomNo)){
+                roomList.get(i).setClean(true);
+                foundRoom = true;
+                break;
             }
+        }
     }
 }
