@@ -6,7 +6,7 @@ public class Receptionist extends Employee {
     Guest guest;
     Player player;
 
-    public Receptionist(String name, String id,String phoneNo, String location, String position, Shifts shift ) {
+    public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
         super(location, position, shift, name, id);
         this.phoneNo = phoneNo;
     }

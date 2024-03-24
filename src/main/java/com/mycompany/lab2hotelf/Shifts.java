@@ -72,7 +72,7 @@ public class Shifts {
         defineShifts();
         assignedShifts = new ArrayList<>();
         Employee employee;
-        Shifts SHIFT = new Shifts();
+        //Shifts  = new Shifts();
         int a=0;
         do{
             String name = in.readString("Nombre del trabajador");
@@ -98,7 +98,7 @@ public class Shifts {
                 case 3 -> shift = availableShifts.get(K-1);
                 case 4 -> shift = consultCustomShifts();
             }
-            employee = new Employee(location, position, SHIFT, name, id); //CORREGIR
+            employee = new Employee(location, position, shift, name, id); //CORREGIR
             assignedShifts.add(employee);
             a++;
         }while(a<cantidad);

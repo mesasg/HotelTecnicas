@@ -8,6 +8,8 @@ public class Lab2HotelF {
     static Receptionist receptionist;
     static Housekeeping housekeeper;
     static Guest guest;
+    static String shift = "Current";
+    //static Shifts shift = new Shifts();
     static int volver;
     
     public static void main(String[] args) {
@@ -35,7 +37,6 @@ public class Lab2HotelF {
     
     public static void logInManager(){
         String position = "Manager";
-        Shifts shift = new Shifts();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
@@ -46,13 +47,21 @@ public class Lab2HotelF {
     
     public static void logInReceptionist(){
         String position = "Receptionist";
-        Shifts shift = new Shifts();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
         String location = in.readString("Ingresa tu ubicación");
         receptionist = new Receptionist(name,id,phoneNo,location,position,shift);
         receptionist.bookRoom();
+    }
+    
+    public static void logInHousekeeping(){
+        String position = "Housekeeper";
+        String name = in.readString("Ingresa tu nombre: ");
+        String id  = in.readString("Ingresa tu identificación");
+        String location = in.readString("Ingresa tu ubicación");
+        housekeeper = new Housekeeping(name,id,location,position,shift);
+        housekeeper.manageCleaning(housekeeper);
     }
     
     public static void logInGuest(){
@@ -64,15 +73,5 @@ public class Lab2HotelF {
         String roomNo = in.readString("Ingresa el número de tu habitación");
         guest = new Guest(name,id,phoneNo,address,room);
         guest.checkIn(name,roomNo);
-    }
-    
-    public static void logInHousekeeping(){
-        String position = "Housekeeper";
-        Shifts shift = new Shifts();
-        String name = in.readString("Ingresa tu nombre: ");
-        String id  = in.readString("Ingresa tu identificación");
-        String location = in.readString("Ingresa tu ubicación");
-        housekeeper = new Housekeeping(name,id,location,position,shift);
-        housekeeper.manageCleaning(housekeeper);
     }
 }

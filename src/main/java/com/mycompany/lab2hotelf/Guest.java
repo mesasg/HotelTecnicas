@@ -16,6 +16,13 @@ public class Guest extends Person {
         
     }
     
+    public void requestFood(){
+        System.out.println("¿Desea su comida preparada por un chef francés o uno regular?");
+        
+        
+    }
+    
+    //Getter and setters
     public String getPhoneNo() {
         return phoneNo;
     }

@@ -3,9 +3,9 @@ package com.mycompany.lab2hotelf;
 public class Employee extends Person {
     private String location;
     private String position;
-    private Shifts shift;
+    private String shift;
 
-    public Employee(String location, String position, Shifts shift, String name, String id) {
+    public Employee(String location, String position, String shift, String name, String id) {
         super(name, id);
         this.location = location;
         this.position = position;
@@ -28,18 +28,18 @@ public class Employee extends Person {
         this.position = position;
     }
 
-    public Shifts getShift() {
+    public String getShift() {
         return shift;
     }
 
-    public void setShift(Shifts shift) {
+    public void setShift(String shift) {
         this.shift = shift;
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Empleado{");
+        sb.append("Empleado{Nombre =").append(super.getName());
         sb.append(", Ubicacion=").append(location);
         sb.append(", Cargo=").append(position);
         sb.append(", Turno=").append(shift.toString());
