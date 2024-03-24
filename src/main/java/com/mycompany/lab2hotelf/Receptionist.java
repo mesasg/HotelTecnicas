@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class Receptionist extends Employee {
     private String phoneNo;
     Hotel hotel = new Hotel();
-    private ArrayList<Room> roomList;
 
     public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
         super(location, position, shift, name, id);
@@ -29,7 +28,8 @@ public class Receptionist extends Employee {
     }
     
     public void checkRoomAvailability(){
-        System.out.println("Hay un total de "+hotel.availableRooms(roomList)+" habitaciones disponibles.");
+        hotel.defineRooms();
+        System.out.println("Hay un total de "+hotel.availableRooms()+" habitaciones disponibles.");
     }
     public void bookRoom(){
         //array de habitaciones con bool de si esta true esta tomada y fals esta disponible

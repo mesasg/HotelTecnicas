@@ -7,8 +7,9 @@ public class Hotel {
 
     //Constructors
     public Hotel() {
+        this.roomsList = new ArrayList<>();
     }
-
+    
     public Hotel(ArrayList<Room> roomsList) {
         this.roomsList = roomsList;
     }
@@ -26,7 +27,7 @@ public class Hotel {
                     roomType = "Grande";
                     capacity = 4;
                 }
-                if (j == 2){
+                else if (j == 2){
                     roomType = "Mediana";
                     capacity = 2;
                 }
@@ -42,11 +43,11 @@ public class Hotel {
         }
     }
     
-    public int availableRooms(ArrayList<Room> roomList){
-        int numberOfRooms = roomList.size();
+    public int availableRooms(){
+        int numberOfRooms = roomsList.size();
         int numberOfAvailableRooms = 0;
         for(int i = 0; i < numberOfRooms; i++){
-            if (roomList.get(i).isAvailable()){
+            if (roomsList.get(i).isAvailable()){
                numberOfAvailableRooms += 1; 
             }
         }

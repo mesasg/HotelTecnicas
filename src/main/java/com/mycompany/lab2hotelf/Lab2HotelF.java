@@ -1,12 +1,14 @@
 package com.mycompany.lab2hotelf;
 
+import java.util.ArrayList;
+
 public class Lab2HotelF {
+    static Reading in = new Reading();
     static Manager manager;
     static Receptionist receptionist;
     static Housekeeping housekeeper;
-    static Hotel hotel = new Hotel();
-    static Reading in = new Reading();
     static int volver;
+    
     public static void main(String[] args) {
         
         do{
