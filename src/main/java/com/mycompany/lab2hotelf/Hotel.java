@@ -1,8 +1,6 @@
 package com.mycompany.lab2hotelf;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Hotel {
     private ArrayList<Room> roomsList;
@@ -21,7 +19,8 @@ public class Hotel {
     public String assignRoom(int numGuest){
         getAvailableRooms();
         for (Room room : availableRooms){
-            if(room.isAvailable() && room.getCapacity() == numGuest){
+            
+            if(true == room.isAvailable() && (room.getCapacity() == numGuest)){
                 room.setAvailable(false);
                 return room.getRoomNo();
             }
@@ -72,7 +71,7 @@ public class Hotel {
     public void getAvailableRooms(){
         availableRooms = new ArrayList<>();
         for (int i  = 0; i <roomsList.size() ;i++){
-            if(roomsList.get(i).isAvailable()){
+            if(true == roomsList.get(i).isAvailable()){
                 availableRooms.add(roomsList.get(i));
             }
         }

@@ -10,18 +10,18 @@ import java.util.ArrayList;
  *
  * @author saram
  */
-public class Team extends Guest{
+public class Player extends Guest{
     private String position;
     private String number;
-    ArrayList<Team> equipo = new ArrayList<>();
+    ArrayList<Player> equipo = new ArrayList<>();
 
-    public Team(String name, String id,String position, String number, String phoneNo, String address, String room) {
+    public Player(String name, String id,String position, String number, String phoneNo, String address, String room) {
         super(phoneNo, address, room, name, id);
         this.position = position;
         this.number = number;
     }
 
-    public void createTeam(Team player){
+    public void createTeam(Player player){
         equipo.add(player);
         
     }
@@ -41,7 +41,7 @@ public class Team extends Guest{
     public void setNumber(String number) {
         this.number = number;
     }
-    public ArrayList<Team> getTeam(){
+    public ArrayList<Player> getTeam(){
         return equipo;
     }
 

@@ -12,6 +12,10 @@ public class Guest extends Person {
         this.roomNo = roomNo;
     }
     
+    public void checkIn(String name,String roomNo){
+        
+    }
+    
     public String getPhoneNo() {
         return phoneNo;
     }

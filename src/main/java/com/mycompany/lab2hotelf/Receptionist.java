@@ -14,7 +14,7 @@ public class Receptionist extends Employee {
     private String phoneNo;
     Hotel hotel = new Hotel();
     Guest guest;
-    Team player;
+    Player player;
 
     public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
         super(location, position, shift, name, id);
@@ -32,8 +32,11 @@ public class Receptionist extends Employee {
     public void checkRoomAvailability(){
         System.out.println("Hay un total de "+hotel.countAvailableRooms()+" habitaciones disponibles.");
     }
+    
     public void bookRoom(){
-        int guestType = in.readIntRange("Selecciona el tipo de huesped que deseas registrar\n1-Huesped normal\n2-Equipo de futbol",
+        boolean registerOther = false;
+        do {
+            int guestType = in.readIntRange("Selecciona el tipo de huesped que deseas registrar\n1-Huesped normal\n2-Equipo de futbol",
                 1, 2, "Opcion invalida");
         
         if (guestType == 1){
@@ -67,6 +70,13 @@ public class Receptionist extends Employee {
                 registerTeam(room);
             }
         }
+        int opcion = in.readIntRange("Si desea registrar otro huesped ingrese 1, de lo contrario, si desea finalizar esta transacción ingrese 2",1,2,
+                "Opción invalida");
+        if (opcion == 1){
+            registerOther = true;
+        }
+        }while(registerOther == true);
+        
     }
     
     public void registerGuest(String roomNo){
@@ -86,7 +96,7 @@ public class Receptionist extends Employee {
         String phone = in.readString("Número de telefono");
         String address = in.readString("Direccion");
         System.out.println("Habitación asignada: " + roomNo);
-        player = new Team(name,id,pos,num,phone,address,roomNo);
+        player = new Player(name,id,pos,num,phone,address,roomNo);
         player.createTeam(player);
     }
     

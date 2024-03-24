@@ -7,6 +7,7 @@ public class Lab2HotelF {
     static Manager manager;
     static Receptionist receptionist;
     static Housekeeping housekeeper;
+    static Guest guest;
     static int volver;
     
     public static void main(String[] args) {
@@ -55,7 +56,13 @@ public class Lab2HotelF {
     }
     
     public static void logInGuest(){
-        
+        String name = in.readString("Ingresa tu nombre: ");
+        String id  = in.readString("Ingresa tu identificación");
+        String phoneNo = in.readString("Ingresa tu número de telefono");
+        String address = in.readString("Ingresa tu dirección");
+        String roomNo = in.readString("Ingresa el número de tu habitación");
+        guest = new Guest(name,id,phoneNo,address,roomNo);
+        guest.checkIn(name,roomNo);
     }
     
     public static void logInHousekeeping(){
