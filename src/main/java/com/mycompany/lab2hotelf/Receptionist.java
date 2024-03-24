@@ -30,7 +30,6 @@ public class Receptionist extends Employee {
     }
     
     public void checkRoomAvailability(){
-        hotel.defineRooms();
         System.out.println("Hay un total de "+hotel.countAvailableRooms()+" habitaciones disponibles.");
     }
     public void bookRoom(){

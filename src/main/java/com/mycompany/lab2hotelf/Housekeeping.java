@@ -11,7 +11,6 @@ public class Housekeeping extends Employee{
     }
     
     public void manageCleaning(Housekeeping housekeeper) {
-        hotel.defineRooms();
         int roomQty = in.readAndValidateInt("¿En cuántas habitaciones desea registrar la limpieza?: ");
         for(int i = 0; i < roomQty; i++){
             String roomNo = in.readString("Ingresa el número de habitación que deseas registrar como limpia: ");
