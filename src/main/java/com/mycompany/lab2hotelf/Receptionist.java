@@ -49,9 +49,14 @@ public class Receptionist extends Employee {
                 case 3 -> room = hotel.assignRoom(4);
                 case 4 -> room = hotel.assignRoom(4);
             }
-            for (int i = 0; i<cantGuests; i++){
-                System.out.println("Húesped "+ (int)(i+1));
-                registerGuest(room);
+            if("".equals(room)){
+                System.out.println("No hay habitaciones disponibles");
+            }
+            else{
+                for (int i = 0; i<cantGuests; i++){
+                    System.out.println("Húesped "+ (int)(i+1));
+                    registerGuest(room);
+                }
             }
         }
         
@@ -65,15 +70,23 @@ public class Receptionist extends Employee {
                 case 3 -> room = hotel.assignRoom(4);
                 case 4 -> room = hotel.assignRoom(4);
             }
-            for (int i = 0; i<cantPlayers; i++){
+            if("".equals(room)){
+                System.out.println("No hay habitaciones disponibles");
+            }
+            else{
+                for (int i = 0; i<cantPlayers; i++){
                 System.out.println("Jugador "+ (int)(i+1));
                 registerTeam(room);
+                }  
             }
         }
         int opcion = in.readIntRange("Si desea registrar otro huesped ingrese 1, de lo contrario, si desea finalizar esta transacción ingrese 2",1,2,
                 "Opción invalida");
         if (opcion == 1){
             registerOther = true;
+        }
+        else{
+            registerOther = false;
         }
         }while(registerOther == true);
         

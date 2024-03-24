@@ -19,22 +19,22 @@ public class Hotel {
     public String assignRoom(int numGuest){
         getAvailableRooms();
         for (Room room : availableRooms){
-            
-            if(true == room.isAvailable() && (room.getCapacity() == numGuest)){
+            if(true == room.isAvailable() && room.getCapacity() == numGuest){
                 room.setAvailable(false);
                 return room.getRoomNo();
             }
+            return "";
         }
         return "";
     }
     
     //Methods
-    public void defineRooms(){
+    private void defineRooms(){
         String roomNumber;
         String roomLocation;
         String roomType;
         int capacity;
-        for(int i = 1; i<5;i++){
+        for(int i = 1; i<5; i++){
             for (int j = 1; j<6; j++){
                 
                 if (j == 1){
