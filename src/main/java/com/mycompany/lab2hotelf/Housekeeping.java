@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Housekeeping extends Employee{
     private Hotel hotel;
     
-    public Housekeeping(String name, String id, String location, String position, String shift) {
+    public Housekeeping(String name, String id, String location, String position, Shifts shift) {
         super(location, position, shift, name, id);
         this.hotel = new Hotel();
     }

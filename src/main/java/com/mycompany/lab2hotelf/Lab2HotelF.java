@@ -35,7 +35,7 @@ public class Lab2HotelF {
     
     public static void logInManager(){
         String position = "Manager";
-        String shift = "Current";
+        Shifts shift = new Shifts();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
@@ -46,7 +46,7 @@ public class Lab2HotelF {
     
     public static void logInReceptionist(){
         String position = "Receptionist";
-        String shift = "Current";
+        Shifts shift = new Shifts();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
@@ -56,18 +56,19 @@ public class Lab2HotelF {
     }
     
     public static void logInGuest(){
+        Room room = new Room();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
         String address = in.readString("Ingresa tu dirección");
         String roomNo = in.readString("Ingresa el número de tu habitación");
-        guest = new Guest(name,id,phoneNo,address,roomNo);
+        guest = new Guest(name,id,phoneNo,address,room);
         guest.checkIn(name,roomNo);
     }
     
     public static void logInHousekeeping(){
         String position = "Housekeeper";
-        String shift = "Current";
+        Shifts shift = new Shifts();
         String name = in.readString("Ingresa tu nombre: ");
         String id  = in.readString("Ingresa tu identificación");
         String location = in.readString("Ingresa tu ubicación");

@@ -1,22 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.lab2hotelf;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author saram
- */
 public class Player extends Guest{
     private String position;
     private String number;
     ArrayList<Player> equipo = new ArrayList<>();
 
-    public Player(String name, String id,String position, String number, String phoneNo, String address, String room) {
-        super(phoneNo, address, room, name, id);
+    public Player(String name, String id,String position, String number, String phoneNo, String address, Room room) {
+        super(phoneNo, address, name, id, room);
         this.position = position;
         this.number = number;
     }
