@@ -5,15 +5,13 @@ public class Guest extends Person {
     private String address;
     private String roomNo;
 
-    public Guest(String phoneNo, String address, String roomNo, String name, String id) {
+    public Guest(String name, String id,String phoneNo, String address, String roomNo) {
         super(name, id);
         this.phoneNo = phoneNo;
         this.address = address;
         this.roomNo = roomNo;
     }
     
-    
-
     public String getPhoneNo() {
         return phoneNo;
     }

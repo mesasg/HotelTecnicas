@@ -20,7 +20,7 @@ public class Room {
         this.clean = clean;
         this.available = available;
     }
-
+    
     //Getters and setters
     public String getRoomNo() {
         return roomNo;

@@ -13,9 +13,7 @@ import java.util.ArrayList;
 public class Team extends Guest{
     private String position;
     private String number;
-    Reading in = new Reading();
-    ArrayList<Team> equipo;
-
+    ArrayList<Team> equipo = new ArrayList<>();
 
     public Team(String name, String id,String position, String number, String phoneNo, String address, String room) {
         super(phoneNo, address, room, name, id);
@@ -23,21 +21,9 @@ public class Team extends Guest{
         this.number = number;
     }
 
-    public void createTeam(){
-        equipo = new ArrayList<Team>();
-        int cantPlayers = in.readAndValidateInt("Ingresa la cantidad de jugadores que hay en tu equipo");
-        for (int i = 0; i<cantPlayers; i++){
-            Team player;
-            String name = in.readString("Nombre Jugador "+ (i+1));
-            String id = in.readString("Id");
-            String pos = in.readString("Posicion en la cancha");
-            String num = in.readString("Número de camiseta");
-            String phoneNo = in.readString("Número de telefono");
-            String address = in.readString("Direccion");
-            String room = "";
-            player = new Team(name,id,pos,num,phoneNo,address,room);
-            equipo.add(player);
-        }
+    public void createTeam(Team player){
+        equipo.add(player);
+        
     }
 
     public String getPosition() {
@@ -54,6 +40,9 @@ public class Team extends Guest{
 
     public void setNumber(String number) {
         this.number = number;
+    }
+    public ArrayList<Team> getTeam(){
+        return equipo;
     }
 
     @Override

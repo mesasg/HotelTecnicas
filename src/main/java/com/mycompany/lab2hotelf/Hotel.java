@@ -1,17 +1,32 @@
 package com.mycompany.lab2hotelf;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Hotel {
     private ArrayList<Room> roomsList;
+    private ArrayList<Room> availableRooms;
 
     //Constructors
     public Hotel() {
         this.roomsList = new ArrayList<>();
+        defineRooms();
     }
     
     public Hotel(ArrayList<Room> roomsList) {
         this.roomsList = roomsList;
+    }
+    
+    public String assignRoom(int numGuest){
+        getAvailableRooms();
+        for (Room room : availableRooms){
+            if(room.isAvailable() && room.getCapacity() == numGuest){
+                room.setAvailable(false);
+                return room.getRoomNo();
+            }
+        }
+        return "";
     }
     
     //Methods
@@ -43,7 +58,7 @@ public class Hotel {
         }
     }
     
-    public int availableRooms(){
+    public int countAvailableRooms(){
         int numberOfRooms = roomsList.size();
         int numberOfAvailableRooms = 0;
         for(int i = 0; i < numberOfRooms; i++){
@@ -54,6 +69,15 @@ public class Hotel {
         return(numberOfAvailableRooms);
     }
     
+    public void getAvailableRooms(){
+        availableRooms = new ArrayList<>();
+        for (int i  = 0; i <roomsList.size() ;i++){
+            if(roomsList.get(i).isAvailable()){
+                availableRooms.add(roomsList.get(i));
+            }
+        }
+        
+    }
     //Getters and setters
     public ArrayList<Room> getRoomsList() {
         return roomsList;
