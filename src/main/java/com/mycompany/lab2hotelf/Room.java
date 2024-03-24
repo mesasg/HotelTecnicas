@@ -5,20 +5,24 @@ public class Room {
     private String location;
     private String type;
     private int capacity;
+    private double pricePerHour;
     private boolean clean;
     private boolean available;
+    private Guest guest;
 
     //Constructors
     public Room() {
     }
-
-    public Room(String roomNo, String location, String type, int capacity, boolean clean, boolean available) {
+    
+    public Room(String roomNo, String location, String type, int capacity, double pricePerHour, boolean clean, boolean available, Guest guest) {
         this.roomNo = roomNo;
         this.location = location;
         this.type = type;
         this.capacity = capacity;
+        this.pricePerHour = pricePerHour;
         this.clean = clean;
         this.available = available;
+        this.guest = guest;
     }
     
     //Getters and setters
@@ -70,6 +74,14 @@ public class Room {
         this.available = available;
     }
 
+    public Guest getGuest() {
+        return guest;
+    }
+
+    public void setGuest(Guest guest) {
+        this.guest = guest;
+    }
+    
     @Override
     public String toString() {
         return "Información de la habitación #" + roomNo 

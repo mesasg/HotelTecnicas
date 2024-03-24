@@ -3,13 +3,13 @@ package com.mycompany.lab2hotelf;
 public class Guest extends Person {
     private String phoneNo;
     private String address;
-    private String roomNo;
-
-    public Guest(String name, String id,String phoneNo, String address, String roomNo) {
+    private Room room;
+    
+    public Guest(String name, String id,String phoneNo, String address, Room room) {
         super(name, id);
         this.phoneNo = phoneNo;
         this.address = address;
-        this.roomNo = roomNo;
+        this.room = room;
     }
     
     public String getPhoneNo() {
@@ -28,12 +28,12 @@ public class Guest extends Person {
         this.address = address;
     }
 
-    public String getRoom() {
-        return roomNo;
+    public Room getRoom() {
+        return room;
     }
 
-    public void setRoom(String roomNo) {
-        this.roomNo = roomNo;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class Guest extends Person {
         sb.append("Guest{");
         sb.append("phoneNo=").append(phoneNo);
         sb.append(", Address=").append(address);
-        sb.append(", room=").append(roomNo);
+        sb.append(", room=").append(room.getRoomNo());
         sb.append('}');
         return sb.toString();
     }

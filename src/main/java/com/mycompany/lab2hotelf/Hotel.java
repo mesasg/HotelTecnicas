@@ -1,8 +1,6 @@
 package com.mycompany.lab2hotelf;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Hotel {
     private ArrayList<Room> roomsList;
@@ -18,15 +16,15 @@ public class Hotel {
         this.roomsList = roomsList;
     }
     
-    public String assignRoom(int numGuest){
+    public Room assignRoom(int numGuest){
         getAvailableRooms();
         for (Room room : availableRooms){
-            if(room.isAvailable() && room.getCapacity() == numGuest){
+            if(room.isAvailable() && (room.getCapacity() == numGuest)){
                 room.setAvailable(false);
-                return room.getRoomNo();
+                return room;
             }
         }
-        return "";
+        return null;
     }
     
     //Methods
@@ -34,6 +32,7 @@ public class Hotel {
         String roomNumber;
         String roomLocation;
         String roomType;
+        double pricePerHour;
         int capacity;
         for(int i = 1; i<5;i++){
             for (int j = 1; j<6; j++){
@@ -41,18 +40,28 @@ public class Hotel {
                 if (j == 1){
                     roomType = "Grande";
                     capacity = 4;
+                    pricePerHour = 5000;
                 }
                 else if (j == 2){
                     roomType = "Mediana";
                     capacity = 2;
+                    pricePerHour = 4000;
                 }
                 else{
                     roomType = "Pequeña";
                     capacity = 1;
+                    pricePerHour = 3000;
                 }
                 roomNumber =(String.valueOf(i)+ "0"+ String.valueOf(j));
                 roomLocation = "Piso "+ String.valueOf(i);
-                Room room = new Room(roomNumber,roomLocation,roomType, capacity, true, true);
+                Room room = new Room(roomNumber,
+                                     roomLocation,
+                                     roomType,
+                                     capacity,
+                                     pricePerHour,
+                                     true,
+                                     true,
+                                     null);
                 roomsList.add(room);
             }
         }

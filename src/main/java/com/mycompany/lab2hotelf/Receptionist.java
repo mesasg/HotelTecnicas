@@ -1,22 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.lab2hotelf;
 
-import java.util.ArrayList;
-
-/**
- *
- * @author saram
- */
 public class Receptionist extends Employee {
     private String phoneNo;
     Hotel hotel = new Hotel();
     Guest guest;
     Team player;
 
-    public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
+    public Receptionist(String name, String id,String phoneNo, String location, String position, Shifts shift ) {
         super(location, position, shift, name, id);
         this.phoneNo = phoneNo;
     }
@@ -39,7 +29,7 @@ public class Receptionist extends Employee {
         if (guestType == 1){
             int cantGuests = in.readIntRange("¿Cuantas personas se hospedaran?",1,4,
                 "Opcion invalida\nSi son más de 4 personas, deben registrarse en grupos de 1, 2, 3 o 4; de acuerdo con la capacidad de nuestras habitaciones");
-            String room = "";
+            Room room = new Room();
             switch (cantGuests){
                 case 1 -> room = hotel.assignRoom(1);
                 case 2 -> room = hotel.assignRoom(2);
@@ -55,7 +45,7 @@ public class Receptionist extends Employee {
         else {
             int cantPlayers = in.readIntRange("¿Cuantas personas se hospedaran?",1,4,
                 "Opcion invalida\nSi son más de 4 personas, deben registrarse en grupos de 1, 2, 3 o 4; de acuerdo con la capacidad de nuestras habitaciones");
-             String room = "";
+            Room room = new Room();
             switch (cantPlayers){
                 case 1 -> room = hotel.assignRoom(1);
                 case 2 -> room = hotel.assignRoom(2);
@@ -69,24 +59,24 @@ public class Receptionist extends Employee {
         }
     }
     
-    public void registerGuest(String roomNo){
+    public void registerGuest(Room room){
         String name = in.readString("Nombre: ");
         String id = in.readString("Id: ");
         String phone = in.readString("Número de telefono: ");
         String address = in.readString("Dirección: ");
-        System.out.println("Habitación asignada: " + roomNo);
-        guest = new Guest(name,id,phone,address,roomNo);
+        System.out.println("Habitación asignada: " + room.getRoomNo());
+        guest = new Guest(name,id,phone,address,room);
         
     }
-    public void registerTeam(String roomNo){
+    public void registerTeam(Room room){
         String name = in.readString("Nombre Jugador ");
         String id = in.readString("Id");
         String pos = in.readString("Posicion en la cancha");
         String num = in.readString("Número de camiseta");
         String phone = in.readString("Número de telefono");
         String address = in.readString("Direccion");
-        System.out.println("Habitación asignada: " + roomNo);
-        player = new Team(name,id,pos,num,phone,address,roomNo);
+        System.out.println("Habitación asignada: " + room.getRoomNo());
+        player = new Team(name,id,pos,num,phone,address,room);
         player.createTeam(player);
     }
     

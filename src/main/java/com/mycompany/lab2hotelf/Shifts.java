@@ -7,6 +7,9 @@ public class Shifts {
     private ArrayList<String> availableCustomShifts;
     private ArrayList<String> availableShifts;
     private ArrayList<Employee> assignedShifts;
+
+    public Shifts() {
+    }
     
     public void defineCustomShifts(){
         availableCustomShifts = new ArrayList<>();
@@ -69,6 +72,7 @@ public class Shifts {
         defineShifts();
         assignedShifts = new ArrayList<>();
         Employee employee;
+        Shifts SHIFT = new Shifts();
         int a=0;
         do{
             String name = in.readString("Nombre del trabajador");
@@ -94,7 +98,7 @@ public class Shifts {
                 case 3 -> shift = availableShifts.get(K-1);
                 case 4 -> shift = consultCustomShifts();
             }
-            employee = new Employee(name,id,location,position,shift);
+            employee = new Employee(location, position, SHIFT, name, id); //CORREGIR
             assignedShifts.add(employee);
             a++;
         }while(a<cantidad);

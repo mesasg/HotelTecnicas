@@ -5,7 +5,7 @@ public class Manager extends Employee{
     private String phoneNo;
     private int cantStaff;
 
-    public Manager(String name, String id,String phoneNo, String location, String position, String shift) {
+    public Manager(String name, String id, String phoneNo, String location, String position, Shifts shift) {
         super(location, position, shift, name, id);
         this.phoneNo = phoneNo;
     }
