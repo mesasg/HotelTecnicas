@@ -23,7 +23,6 @@ public class Hotel {
                 room.setAvailable(false);
                 return room.getRoomNo();
             }
-            return "";
         }
         return "";
     }
