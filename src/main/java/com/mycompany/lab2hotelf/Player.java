@@ -8,7 +8,7 @@ public class Player extends Guest{
     ArrayList<Player> equipo = new ArrayList<>();
 
     public Player(String name, String id,String position, String number, String phoneNo, String address, Room room) {
-        super(phoneNo, address, name, id, room);
+        super(name, id, phoneNo, address, room);
         this.position = position;
         this.number = number;
     }
