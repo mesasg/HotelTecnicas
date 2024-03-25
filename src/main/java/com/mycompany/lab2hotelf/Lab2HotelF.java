@@ -1,7 +1,5 @@
 package com.mycompany.lab2hotelf;
 
-import java.util.ArrayList;
-
 public class Lab2HotelF {
     static Reading in = new Reading();
     static Manager manager;
@@ -70,8 +68,15 @@ public class Lab2HotelF {
         String id  = in.readString("Ingresa tu identificación");
         String phoneNo = in.readString("Ingresa tu número de telefono");
         String address = in.readString("Ingresa tu dirección");
-        String roomNo = in.readString("Ingresa el número de tu habitación");
+        /*for(int i = 0; i < hotel.getRoomsList().size(); i++){
+            if (hotel.getRoomsList().get(i).getRoomNo().equals(roomNo) 
+                    && hotel.getRoomsList().get(i).getGuest().getId().equals(id));
+            {
+                hotel.getRoomsList().get(i).setAvailable(false);
+                break;
+            }
+        }*/
         guest = new Guest(name,id,phoneNo,address,room);
-        guest.checkIn(name,roomNo);
+        guest.checkIn();
     }
 }

@@ -2,8 +2,6 @@ package com.mycompany.lab2hotelf;
 
 public class Receptionist extends Employee {
     private String phoneNo;
-    Hotel hotel = new Hotel();
-    Guest guest;
     Player player;
 
     public Receptionist(String name, String id,String phoneNo, String location, String position, String shift ) {
@@ -88,7 +86,7 @@ public class Receptionist extends Employee {
         String phone = in.readString("Número de telefono: ");
         String address = in.readString("Dirección: ");
         System.out.println("Habitación asignada: " + room.getRoomNo());
-        guest = new Guest(name,id,phone,address,room);
+        Guest guest = new Guest(name,id,phone,address,room);
         
     }
     public void registerTeam(Room room){

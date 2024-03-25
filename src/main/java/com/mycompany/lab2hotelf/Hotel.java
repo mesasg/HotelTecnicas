@@ -5,17 +5,24 @@ import java.util.ArrayList;
 public class Hotel {
     private ArrayList<Room> roomsList;
     private ArrayList<Room> availableRooms;
+    private ArrayList<Chef> chefList;
+    private ArrayList<Food> foodList;
 
     //Constructors
     public Hotel() {
         this.roomsList = new ArrayList<>();
+        this.chefList = new ArrayList<>();
+        this.foodList = new ArrayList<>();
         defineRooms();
+        defineFoodList();
+        defineChefList();  
     }
     
     public Hotel(ArrayList<Room> roomsList) {
         this.roomsList = roomsList;
     }
     
+    //Methods
     public Room assignRoom(int numGuest){
         getAvailableRooms();
         for (Room room : availableRooms){
@@ -27,12 +34,12 @@ public class Hotel {
         return null;
     }
     
-    //Methods
     public void defineRooms(){
         String roomNumber;
         String roomLocation;
         String roomType;
-        double pricePerHour;
+        double pricePerFood = 0;
+        double pricePerHour = 0;
         int capacity;
         for(int i = 1; i<5; i++){
             for (int j = 1; j<6; j++){
@@ -58,6 +65,7 @@ public class Hotel {
                                      roomLocation,
                                      roomType,
                                      capacity,
+                                     pricePerFood,
                                      pricePerHour,
                                      true,
                                      true,
@@ -65,6 +73,22 @@ public class Hotel {
                 roomsList.add(room);
             }
         }
+    }
+    
+    public void defineChefList(){
+        Chef frenchChef = new Chef("French", "Kitchen", "Chef", "Current", "Louis", "100292221");
+        Chef regularChef = new Chef("Non-french", "Kitchen", "Chef", "Current", "Michael", "912882222");
+        chefList.add(frenchChef);
+        chefList.add(regularChef);
+    }
+    
+    public void defineFoodList(){
+        Food premiumMenu = new Food("Menú premium", 30000, "Default");
+        Food regularMenu = new Food("Menú esencial", 20000, "Default");
+        Food basicMenu = new Food("Menú básico", 15000, "Default");
+        foodList.add(premiumMenu);
+        foodList.add(regularMenu);
+        foodList.add(basicMenu);
     }
     
     public int countAvailableRooms(){
@@ -94,5 +118,21 @@ public class Hotel {
 
     public void setRoomsList(ArrayList<Room> roomsList) {
         this.roomsList = roomsList;
+    }
+
+    public ArrayList<Chef> getChefList() {
+        return chefList;
+    }
+
+    public void setChefList(ArrayList<Chef> chefList) {
+        this.chefList = chefList;
+    }
+
+    public ArrayList<Food> getFoodList() {
+        return foodList;
+    }
+
+    public void setFoodList(ArrayList<Food> foodList) {
+        this.foodList = foodList;
     }
 }

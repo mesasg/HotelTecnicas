@@ -3,7 +3,6 @@ package com.mycompany.lab2hotelf;
 import java.util.ArrayList;
 
 public class Housekeeping extends Employee{
-    private Hotel hotel;
     
     public Housekeeping(String name, String id, String location, String position, String shift) {
         super(location, position, shift, name, id);

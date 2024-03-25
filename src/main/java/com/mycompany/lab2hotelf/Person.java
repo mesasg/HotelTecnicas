@@ -2,6 +2,7 @@ package com.mycompany.lab2hotelf;
 
 public class Person {
     static Reading in = new Reading();
+    static Hotel hotel = new Hotel();
     private String name;
     private String id;
 
@@ -25,5 +26,4 @@ public class Person {
     public void setId(String id) {
         this.id = id;
     }
-    
 }

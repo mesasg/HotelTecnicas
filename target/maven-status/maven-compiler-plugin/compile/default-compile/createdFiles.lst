@@ -4,10 +4,11 @@ com\mycompany\lab2hotelf\Employee.class
 com\mycompany\lab2hotelf\Housekeeping.class
 com\mycompany\lab2hotelf\Person.class
 com\mycompany\lab2hotelf\Lab2HotelF.class
-com\mycompany\lab2hotelf\Hotel.class
 com\mycompany\lab2hotelf\Receptionist.class
+com\mycompany\lab2hotelf\Hotel.class
 com\mycompany\lab2hotelf\Player.class
 com\mycompany\lab2hotelf\Shifts.class
-com\mycompany\lab2hotelf\Chef.class
+com\mycompany\lab2hotelf\Food.class
 com\mycompany\lab2hotelf\Reading.class
+com\mycompany\lab2hotelf\Chef.class
 com\mycompany\lab2hotelf\Room.class

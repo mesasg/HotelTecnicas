@@ -6,6 +6,7 @@ public class Room {
     private String type;
     private int capacity;
     private double pricePerHour;
+    private double pricePerFood;
     private boolean clean;
     private boolean available;
     private Guest guest;
@@ -14,11 +15,12 @@ public class Room {
     public Room() {
     }
     
-    public Room(String roomNo, String location, String type, int capacity, double pricePerHour, boolean clean, boolean available, Guest guest) {
+    public Room(String roomNo, String location, String type, int capacity, double pricePerFood, double pricePerHour, boolean clean, boolean available, Guest guest) {
         this.roomNo = roomNo;
         this.location = location;
         this.type = type;
         this.capacity = capacity;
+        this.pricePerFood = pricePerFood;
         this.pricePerHour = pricePerHour;
         this.clean = clean;
         this.available = available;
@@ -81,7 +83,23 @@ public class Room {
     public void setGuest(Guest guest) {
         this.guest = guest;
     }
-    
+
+    public double getPricePerHour() {
+        return pricePerHour;
+    }
+
+    public void setPricePerHour(double pricePerHour) {
+        this.pricePerHour = pricePerHour;
+    }
+
+    public double getPricePerFood() {
+        return pricePerFood;
+    }
+
+    public void setPricePerFood(double pricePerFood) {
+        this.pricePerFood = pricePerFood;
+    }
+
     @Override
     public String toString() {
         return "Información de la habitación #" + roomNo 
